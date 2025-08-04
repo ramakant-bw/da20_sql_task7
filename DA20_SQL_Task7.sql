@@ -1,5 +1,4 @@
 
-
 -- Creating 2 ENUM
 
 
@@ -23,8 +22,6 @@ VALUES
 ('Aman', 'Laptop', 1, '2025-08-01', 'credit_card'),
 ('Rohit', 'Smartphone', 2, '2025-08-02', 'paypal');
 
-Select * From Orders; 
-
 
 
 -- 2. Adding ENUM Using Alter
@@ -38,10 +35,9 @@ INSERT INTO orders (customer_name, product_name, quantity, order_date, payment_m
 VALUES
 ('Shaam', 'Keyboard', 5, '2025-08-04', 'cash', 'standard');
 
-Select * From Orders; 
 
 
------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 
 -- Creating 3 Domain 
 
@@ -74,7 +70,7 @@ ALTER TABLE orders
 ALTER COLUMN quantity TYPE quantity_type;
 
 
----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 
 --Create User Define Function With Multiif Statement 
 
@@ -111,7 +107,6 @@ ALTER TABLE orders ADD COLUMN order_priority TEXT;
 UPDATE orders
 SET order_priority = get_order_priority(quantity);
 
-Select * From Orders; 
+SELECT * FROM orders;
 
-
--------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
